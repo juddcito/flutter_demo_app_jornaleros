@@ -17,20 +17,28 @@ class EmpleadosScreen extends StatelessWidget {
     final styles = Theme.of(context).textTheme;
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
       extendBodyBehindAppBar: true,
-      appBar: customAppbar(),
+      appBar: customAppbar('Empleados'),
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
               child: ListView.builder(
                 itemCount: 20,
                 itemBuilder: (context, index) {
-                  return const Column(
-                    children: [_CustomEmpleadoTile(), Divider()],
+                  bool valor = false;
+                  if (index % 2 == 0) {
+                    valor = true;
+                  }
+                  return Column(
+                    children: [_CustomEmpleadoTile(valor: valor), const Divider()],
                   );
                 },
               ),
@@ -43,17 +51,25 @@ class EmpleadosScreen extends StatelessWidget {
 }
 
 class _CustomEmpleadoTile extends StatefulWidget {
-  const _CustomEmpleadoTile({super.key});
+
+  final bool valor;
+
+   _CustomEmpleadoTile({
+    required this.valor
+  });
 
   @override
   State<_CustomEmpleadoTile> createState() => _CustomEmpleadoTileState();
 }
 
+
 class _CustomEmpleadoTileState extends State<_CustomEmpleadoTile> {
-  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
+
+    bool isChecked = widget.valor;
+
     return GFCheckboxListTile(
         //padding: const EdgeInsets.only(top:20),
         titleText: 'Sebastián Vega',
@@ -72,7 +88,7 @@ class _CustomEmpleadoTileState extends State<_CustomEmpleadoTile> {
         value: isChecked,
         onChanged: (value) {
           if (isChecked == false) {
-            context.push('face-register');
+            context.push('/registrar-rostro');
           }
         });
   }

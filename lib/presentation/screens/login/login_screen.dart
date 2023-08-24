@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_app_jornaleros/config/theme/app_theme.dart';
 import 'package:flutter_demo_app_jornaleros/presentation/widgets/login/custom_button.dart';
-import 'package:flutter_demo_app_jornaleros/presentation/widgets/login/username_textfield.dart';
+import 'package:flutter_demo_app_jornaleros/presentation/widgets/login/custom_textfield.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
@@ -84,6 +84,8 @@ class LoginScreen extends StatelessWidget {
                             obscureText: false,
                             icon: FontAwesomeIcons.solidUser,
                           ),
+
+                          const SizedBox(height: 5,),
           
                           CustomTextfield(
                             controller: passwordController,
@@ -94,7 +96,7 @@ class LoginScreen extends StatelessWidget {
           
                           const SizedBox(height: 40),
           
-                          CustomButton(onTap:() => context.push('/home'))
+                          CustomButton(onTap:() => context.push('/home'), text: 'Login',)
           
                         ],
                       ),

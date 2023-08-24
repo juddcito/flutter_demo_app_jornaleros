@@ -1,13 +1,13 @@
   import 'package:flutter/material.dart';
 
-AppBar customAppbar() {
+AppBar customAppbar(String title) {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0.0,
       toolbarHeight: 90,
       foregroundColor: Colors.white,
       centerTitle: true,
-      title: const Text('Empleados'),
+      title: Text(title),
       flexibleSpace: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(

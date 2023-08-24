@@ -14,6 +14,6 @@ final appHomeItems = <HomeItem>[
   HomeItem('Lotes', 'link', FontAwesomeIcons.solidSquare),
   HomeItem('Actividades', 'link', FontAwesomeIcons.list),
   HomeItem('Empleados', '/empleados', FontAwesomeIcons.peopleGroup),
-  HomeItem('Chequeo', 'link', FontAwesomeIcons.book),
-  HomeItem('Registro de rostros', 'link', FontAwesomeIcons.faceSmile),
+  HomeItem('Chequeo', '/chequeo', FontAwesomeIcons.book),
+  //HomeItem('Registro de rostros', 'link', FontAwesomeIcons.faceSmile),
 ];
