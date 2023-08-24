@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_app_jornaleros/presentation/widgets/home/home_items.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
@@ -51,7 +52,9 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(60),
-                          topRight: Radius.circular(60))),
+                          topRight: Radius.circular(60)
+                      )
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
@@ -108,6 +111,9 @@ class _CustomListTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: ListTile(
+        onTap:() {
+          context.push(homeItem.link);
+        },
         leading: Icon(homeItem.icon, size: 38,),
         trailing: const Icon(Icons.arrow_forward_ios_rounded),
         title: Text(homeItem.title),

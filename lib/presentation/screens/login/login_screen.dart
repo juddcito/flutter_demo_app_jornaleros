@@ -66,10 +66,10 @@ class LoginScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Bienvenido',
+                                  'Iniciar sesión',
                                   style: TextStyle(
                                     fontWeight:FontWeight.bold,
-                                    fontSize: 32
+                                    fontSize: 30
                                   ),
                                 ),
                               ],

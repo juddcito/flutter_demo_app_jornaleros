@@ -17,14 +17,14 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(25),
-        margin: EdgeInsets.symmetric(horizontal: 25),
+        margin: const EdgeInsets.symmetric(horizontal: 25),
         decoration: BoxDecoration(
-          color: Color(0XFF279EFF),
+          color: const Color(0XFF279EFF),
           borderRadius: BorderRadius.circular(8)
         ),
         child: const Center(
           child: Text(
-            'Iniciar sesión',
+            'Login',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
