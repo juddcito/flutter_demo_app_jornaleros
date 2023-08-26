@@ -14,13 +14,16 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(25),
         margin: const EdgeInsets.symmetric(horizontal: 25),
         decoration: BoxDecoration(
-          color: const Color(0XFF279EFF),
+          color: text == 'Asignar' || text == 'Login' ? const Color(0XFF279EFF) : Colors.green,
           borderRadius: BorderRadius.circular(20)
         ),
         child: Center(
@@ -33,7 +36,6 @@ class CustomButton extends StatelessWidget {
             ),
           ),
         ),
-    
       ),
     );
   }

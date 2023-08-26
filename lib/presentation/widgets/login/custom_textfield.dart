@@ -28,10 +28,12 @@ class CustomTextfield extends StatelessWidget {
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
           enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white)
+            borderSide: BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.all(Radius.circular(25))
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey.shade400)
+            borderSide: BorderSide(color: Colors.grey.shade400),
+            borderRadius: BorderRadius.all(Radius.circular(25))
           ),
           fillColor: Colors.grey.shade200,
           filled: true,

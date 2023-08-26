@@ -4,7 +4,7 @@ AppBar customAppbar(String title) {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0.0,
-      toolbarHeight: 90,
+      toolbarHeight: 80,
       foregroundColor: Colors.white,
       centerTitle: true,
       title: Text(title),
@@ -14,16 +14,16 @@ AppBar customAppbar(String title) {
             bottomLeft: Radius.circular(20),
             bottomRight: Radius.circular(20)
 
-          ),
+          ), 
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             colors: [
-              Colors.blue[900]!,       
-              Colors.blue[800]!,
-              Colors.blue[400]!,
+              Colors.blue[900]!,
+            Colors.blue[800]!,
+            Colors.blue[400]!,
             ]
           )
-        )
+        ),
       ),
     );
   }

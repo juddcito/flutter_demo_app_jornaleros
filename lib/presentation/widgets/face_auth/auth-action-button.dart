@@ -2,10 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo_app_jornaleros/infrastructure/database/database_helper.dart';
 import 'package:flutter_demo_app_jornaleros/infrastructure/models/trabajador_model.dart';
-import 'package:flutter_demo_app_jornaleros/presentation/screens/empleados/empleados_screen.dart';
+import 'package:flutter_demo_app_jornaleros/presentation/screens/cuadrilla/cuadrilla_screen.dart';
 import 'package:flutter_demo_app_jornaleros/presentation/screens/login/login_screen.dart';
 import 'package:flutter_demo_app_jornaleros/presentation/widgets/face_auth/app_button.dart';
 import 'package:flutter_demo_app_jornaleros/presentation/widgets/face_auth/app_text_field.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../infrastructure/services/camera.service.dart';
 import '../../../infrastructure/services/ml_service.dart';
@@ -87,10 +88,11 @@ class _AuthActionButtonState extends State<AuthActionButton> {
             predictedUser = user;
           }
         }
-        PersistentBottomSheetController bottomSheetController =
-            Scaffold.of(context)
-                .showBottomSheet((context) => signSheet(context));
-        bottomSheetController.closed.whenComplete(() => widget.reload());
+        context.pop();
+        //PersistentBottomSheetController bottomSheetController =
+            //Scaffold.of(context)
+               // .showBottomSheet((context) => signSheet(context));
+        //bottomSheetController.closed.whenComplete(() => widget.reload());
       }
     } catch (e) {
       print(e);
@@ -107,9 +109,9 @@ class _AuthActionButtonState extends State<AuthActionButton> {
           color: Colors.blue[200],
           boxShadow: <BoxShadow>[
             BoxShadow(
-              color: Colors.blue.withOpacity(0.1),
-              blurRadius: 1,
-              offset: const Offset(0, 2),
+              color: Colors.blue,
+              //blurRadius: 1,
+              //offset: const Offset(0, 2),
             ),
           ],
         ),

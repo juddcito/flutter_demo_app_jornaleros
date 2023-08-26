@@ -35,10 +35,12 @@ class _CustomDropdownState extends State<CustomDropdown> {
           filled: true,
           prefixIcon: Icon(widget.icon),
           enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white)
+            borderSide: BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.all(Radius.circular(25))
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey.shade400)
+            borderSide: BorderSide(color: Colors.grey.shade400),
+            borderRadius: BorderRadius.all(Radius.circular(25))
           )
         ),
         icon: const Icon(Icons.arrow_drop_down),
