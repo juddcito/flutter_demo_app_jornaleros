@@ -40,7 +40,7 @@ class _RegistroEmpleadoScreenState extends State<RegistroEmpleadoScreen> {
                       padding: EdgeInsets.all(25.0),
                       child: Icon(
                         FontAwesomeIcons.solidCircleUser,
-                        size: 92,
+                        size: 138,
                       ),
                     ),
                   ),  

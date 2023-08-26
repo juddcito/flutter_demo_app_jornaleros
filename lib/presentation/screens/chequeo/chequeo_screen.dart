@@ -40,7 +40,7 @@ class ChequeoScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      'Asignación',
+                      'Asignación de actividades',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
@@ -189,7 +189,10 @@ class _TrabajadorListviewState extends ConsumerState<_TrabajadorListview> {
   Widget build(BuildContext context) {
     final empleadosListProvider = ref.watch(empleadosProvider);
 
-    return ListView.builder(
+    return ListView.separated(
+      separatorBuilder: (context, index) {
+        return Divider();
+      },
       // agregar siempre que tengamos un listview dentro de un singlechildscrollview
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
@@ -199,9 +202,15 @@ class _TrabajadorListviewState extends ConsumerState<_TrabajadorListview> {
         bool valor = true;
         return Column(
           children: [
-            _CustomEmpleadoTile(
-                nombre: empleado.nombre, puesto: empleado.puesto, valor: valor),
-            const Divider()
+            InkWell(
+              onTap: () {
+                debugPrint('Tocado');
+              },
+              child: _CustomEmpleadoTile(
+                  nombre: empleado.nombre,
+                  puesto: empleado.puesto,valor: valor
+              ),
+            ),
           ],
         );
       },
@@ -244,9 +253,7 @@ class _CustomEmpleadoTileState extends State<_CustomEmpleadoTile> {
         ),
         value: isChecked,
         onChanged: (value) {
-          if (isChecked == false) {
-            context.push('/registrar-rostro');
-          }
-        });
+        }
+    );
   }
 }

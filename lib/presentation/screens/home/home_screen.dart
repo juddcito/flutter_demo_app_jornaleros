@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
+        top: false,
         child: Container(
           width: double.infinity,
           decoration: BoxDecoration(

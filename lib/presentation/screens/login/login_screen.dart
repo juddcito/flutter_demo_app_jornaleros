@@ -19,6 +19,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
+          top: false,
           child: SingleChildScrollView(
             child: Container(
               width: double.infinity,
@@ -40,8 +41,8 @@ class LoginScreen extends StatelessWidget {
                     child: Image.asset(
                       'assets/siproin_logo-removebg-preview.png',
                       fit: BoxFit.cover,
-                      width: 250,
-                      height: 250,
+                      width: 280,
+                      height: 280,
                     ),
                   ),
 
