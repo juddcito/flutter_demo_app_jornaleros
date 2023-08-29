@@ -166,7 +166,7 @@ class ChequeoScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              _TrabajadorListview()
+              const _TrabajadorListview()
             ],
           ),
         ),
@@ -191,7 +191,7 @@ class _TrabajadorListviewState extends ConsumerState<_TrabajadorListview> {
 
     return ListView.separated(
       separatorBuilder: (context, index) {
-        return Divider();
+        return const Divider();
       },
       // agregar siempre que tengamos un listview dentro de un singlechildscrollview
       physics: const NeverScrollableScrollPhysics(),
